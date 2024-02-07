@@ -1,0 +1,32 @@
+apiVersion: mq.iotoperations.azure.com/v1beta1
+kind: BrokerAuthentication
+metadata:
+  annotations:
+    management.azure.com/apiVersion: 2023-10-04-preview
+    management.azure.com/bridgeLocation: EastUS
+    management.azure.com/cloudEnvironment: AzureCloud
+    management.azure.com/correlationId: 0aeb81f8-63dd-45f6-8024-4422a789c556
+    management.azure.com/customLocation: /subscriptions/187e7484-9620-4660-be81-e7b2c3555281/resourceGroups/aks-edge-rg/providers/Microsoft.ExtendedLocation/customLocations/aks-edge-cluster-cl
+    management.azure.com/location: eastus2
+    management.azure.com/operationId: bc0de2fd-ac06-4c8e-9867-e7ece3cff3b5*DEC5DEAFF0AC9434F8E8FBF012BE1B6D7B2D5B72D873FC1E768BD8F0C1D428EC
+    management.azure.com/parentResourceId: /subscriptions/187e7484-9620-4660-be81-e7b2c3555281/resourceGroups/aks-edge-rg/providers/Microsoft.IoTOperationsMQ/mq/mq-instance/broker/broker
+    management.azure.com/resourceId: /subscriptions/187e7484-9620-4660-be81-e7b2c3555281/resourceGroups/aks-edge-rg/providers/Microsoft.IoTOperationsMQ/mq/mq-instance/broker/broker/authentication/authn
+    management.azure.com/tenantId: 8f31ceff-0c7c-44d1-b7bf-d0d60f325f48
+  creationTimestamp: "2024-02-07T19:02:57Z"
+  generation: 1
+  name: authn-non-tls-listener
+  namespace: azure-iot-operations
+  ownerReferences:
+  - apiVersion: mq.iotoperations.azure.com/v1beta1
+    kind: Broker
+    name: broker
+    uid: db38bdae-a096-496a-879e-411e519ab96a
+  resourceVersion: "4743"
+  uid: bfd3cf90-20da-4aac-8ee1-d79bb0af9ec8
+spec:
+  authenticationMethods:
+  - sat:
+      audiences:
+      - aio-mq
+  listenerRef:
+  - non-tls-listener

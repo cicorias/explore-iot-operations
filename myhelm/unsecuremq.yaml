@@ -1,0 +1,26 @@
+apiVersion: mq.iotoperations.azure.com/v1beta1
+kind: BrokerListener
+metadata:
+  name: non-tls-listener
+  namespace: azure-iot-operations
+spec:
+  brokerRef: broker
+  serviceType: loadBalancer
+  serviceName: my-unique-service-name
+  authenticationEnabled: true
+  authorizationEnabled: false
+  port: 1883
+
+---
+apiVersion: mq.iotoperations.azure.com/v1beta1
+kind: BrokerAuthentication
+metadata: 
+  name: authn-non-tls-listener
+  namespace: azure-iot-operations
+spec:
+  listenerRef:
+    - non-tls-listener
+  authenticationMethods:
+    - sat:
+        audiences:
+        - aio-mq
